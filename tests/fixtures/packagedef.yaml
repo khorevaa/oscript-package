@@ -1,0 +1,58 @@
+name: Тестовый_пакет 
+version: 0.0.1
+description: Конвертация и чтение в формат YAML
+private: true
+license: "ISC"
+bugs: "https://github.com/ashleygwilliams/my_package/issues"
+homepage: "https://github.com/ashleygwilliams/my_package"
+
+engine-version: '*'
+
+include-content:
+    - 'src/*'
+    - 'tests/*'
+    - 'bin/*'
+    - readme.md
+
+explicit-modules:
+    classes:
+       УправлениеГалактикой: "./src/УправлениеГалактикой.os"
+    modules:
+       Жизнь: "./src/Жизнь.os"
+keywords:
+    - opm
+repository:
+    type: git
+    url: ..
+author:
+    name: Автор
+    email: Почта
+    url: url
+dependencies:
+    logos: 1.1.0
+    cmdline: ^3.0.6
+    tempfiles: '^3.4.3"'
+    tool1cd: ^2.0.0
+    v8runner: ^4.0.0
+    strings: '*'
+scripts:
+    build: ""
+    build-linux: "export $OSCRIPTBIN='./' && oscript ./tasks/build.os"
+    build-win: ""
+
+engines:
+    oscript: 1.0.19
+    mono: 4.2
+contributors:
+    - name: Автор
+      email: Почта
+      url: url
+
+main: './src/cmd/бог.os'
+executable: 
+      yaml2: 'yaml2.os'
+
+devDependencies:
+    logos: 1.1.0
+    cmdline: ^3.0.6
+
